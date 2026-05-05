@@ -55,10 +55,8 @@ class AuthController extends Controller
             'address' => 'required|string',
         ]);
 
-        $userRole = Role::where('name', 'user')->first();
+        $userRole = Role::firstOrCreate(['name' => 'user']);
 
-        // Count existing students to generate increment correctly
-        // Wait, better safe auto-increment, a simpler test number generator:
         $count = StudentProfile::count() + 1;
         $testNumber = 'TEST-' . date('Y') . '-' . str_pad($count, 5, '0', STR_PAD_LEFT);
 

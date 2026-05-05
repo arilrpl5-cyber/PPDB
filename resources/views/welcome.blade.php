@@ -33,7 +33,7 @@
                     <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#F59E0B] opacity-75"></span>
                     <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#F59E0B]"></span>
                 </span>
-                <span class="text-[11px] font-black text-[#1E3A8A] uppercase tracking-widest">Proyek Ujian Sertifikasi Kompetensi</span>
+                <span class="text-[11px] font-black text-[#1E3A8A] uppercase tracking-widest">Uji Coba Kompetensi</span>
             </div>
 
             <h1 class="text-5xl md:text-6xl lg:text-7xl font-black text-[#0F172A] tracking-tighter leading-[1.1]">

@@ -318,4 +318,4 @@
     </script>
 </body>
 </html>
-<?php /**PATH C:\Users\RPL-04\Downloads\PMB-Laravel-10-main\PMB-Laravel-10-main\resources\views/student/exam/active.blade.php ENDPATH**/ ?>
+<?php /**PATH C:\Users\RPL-04\Downloads\PMB-Laravel-10-main\PMB-Laravel-10-main\resources\views\student\exam\active.blade.php ENDPATH**/ ?>

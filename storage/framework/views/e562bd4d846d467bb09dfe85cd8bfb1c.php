@@ -63,4 +63,4 @@
 </div>
 <?php $__env->stopSection(); ?>
 
-<?php echo $__env->make('layouts.admin', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\RPL-04\Downloads\PMB-Laravel-10-main\PMB-Laravel-10-main\resources\views/admin/dashboard.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('layouts.admin', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\RPL-04\Downloads\PMB-Laravel-10-main\PMB-Laravel-10-main\resources\views\admin\dashboard.blade.php ENDPATH**/ ?>

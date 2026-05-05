@@ -18,4 +18,4 @@ COPY docker/nginx.conf /etc/nginx/sites-available/default
 
 EXPOSE 8080
 
-CMD php artisan migrate --force && php artisan db:seed --force && envsubst '$PORT' < /etc/nginx/sites-available/default > /etc/nginx/sites-enabled/default && nginx -g 'daemon off;' & php-fpm
+CMD envsubst '$PORT' < /etc/nginx/sites-available/default > /etc/nginx/sites-enabled/default && nginx -g 'daemon off;' & php-fpm

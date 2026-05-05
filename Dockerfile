@@ -4,7 +4,7 @@ RUN apt-get update && apt-get install -y \
     libpng-dev libonig-dev libxml2-dev zip unzip git curl \
     && docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd \
     && a2enmod rewrite \
-    && a2dismod mpm_event \
+    && a2dismod mpm_event mpm_worker \
     && a2enmod mpm_prefork
 
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
@@ -23,4 +23,4 @@ RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-av
 
 EXPOSE 80
 
-CMD php artisan migrate --force ; php artisan db:seed --force ; apache2-foreground
+CMD ["bash", "-c", "sleep 5 && php artisan migrate --force && php artisan db:seed --force && apache2-foreground"]

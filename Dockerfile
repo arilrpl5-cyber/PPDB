@@ -23,4 +23,4 @@ RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-av
 
 EXPOSE 80
 
-CMD ["bash", "-c", "sleep 5 && php artisan migrate --force && php artisan db:seed --force && apache2-foreground"]
+CMD ["bash", "-c", "apache2-foreground & sleep 10 && php artisan migrate --force && php artisan db:seed --force && wait"]

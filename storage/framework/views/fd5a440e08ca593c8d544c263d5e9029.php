@@ -1,21 +1,19 @@
-@extends('layouts.app')
-
-@push('styles')
+<?php $__env->startPush('styles'); ?>
 <style>
     body { background-color: #F8FAFC !important; color: #0F172A !important; }
 </style>
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-@endpush
+<?php $__env->stopPush(); ?>
 
-@section('content')
+<?php $__env->startSection('content'); ?>
 <div class="flex flex-col items-center min-h-[90vh] px-4 py-8 relative">
     
     <!-- Logo Area Top Left -->
     <div class="w-full max-w-6xl mb-12 flex justify-center md:justify-start">
         <div class="flex items-center space-x-4 bg-white px-5 py-3 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300">
             <!-- Fallback logo applied via onError inside img tag -->
-            <img src="{{ asset('logo65.png') }}" onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=SMKN+65&background=1E3A8A&color=fff&rounded=true&font-size=0.4&bold=true';" alt="Logo Sekolah" class="w-14 h-14 object-contain">
+            <img src="<?php echo e(asset('logo65.png')); ?>" onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=SMKN+65&background=1E3A8A&color=fff&rounded=true&font-size=0.4&bold=true';" alt="Logo Sekolah" class="w-14 h-14 object-contain">
             <div class="text-left">
                 <h3 class="font-black text-[#1E3A8A] text-xl leading-tight uppercase tracking-wider">SMK Bagimu Negeriku</h3>
                 <p class="text-xs font-extrabold text-[#F59E0B] uppercase tracking-widest mt-0.5">Semarang</p>
@@ -61,7 +59,7 @@
 
             <!-- Call to action buttons -->
             <div class="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 pt-2">
-                <a href="{{ route('login') }}" class="w-full sm:w-auto inline-flex justify-center items-center py-4 px-10 border border-transparent rounded-xl shadow-lg shadow-[#1E3A8A]/30 text-sm font-extrabold text-white bg-gradient-to-r from-[#1E3A8A] to-[#2563EB] hover:from-[#172e6b] hover:to-[#1d4ed8] focus:outline-none transition-all duration-300 transform hover:-translate-y-1 tracking-wide">
+                <a href="<?php echo e(route('login')); ?>" class="w-full sm:w-auto inline-flex justify-center items-center py-4 px-10 border border-transparent rounded-xl shadow-lg shadow-[#1E3A8A]/30 text-sm font-extrabold text-white bg-gradient-to-r from-[#1E3A8A] to-[#2563EB] hover:from-[#172e6b] hover:to-[#1d4ed8] focus:outline-none transition-all duration-300 transform hover:-translate-y-1 tracking-wide">
                     MASUK KE SISTEM
                     <svg class="ml-3 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                 </a>
@@ -173,4 +171,6 @@
         });
     });
 </script>
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\RPL-04\Downloads\PMB-Laravel-10-main\PMB-Laravel-10-main\resources\views/welcome.blade.php ENDPATH**/ ?>
